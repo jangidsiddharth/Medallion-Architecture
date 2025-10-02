@@ -1,0 +1,32 @@
+{
+	"name": "git_Json_parameter",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "storagedatalake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "git.json",
+				"fileSystem": "gitjsondata"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"relative_path": {
+					"type": "string"
+				},
+				"dir_name": {
+					"type": "string"
+				},
+				"file_name": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
